@@ -11531,51 +11531,61 @@ header.force-header-mobile #mainmenu li ul.mega li ul {
 /* custom  */
 
 .overlay-gradient {
-    /* Define your desired width and height for the container */
-    width: 100%;
-    height: 100%;
-    position: relative;
-    overflow: hidden; /* Ensures the image doesn't spill over if it's bigger than the container */
-
+  /* Define your desired width and height for the container */
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden; /* Ensures the image doesn't spill over if it's bigger than the container */
 }
 
 .overlay-gradient::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    /* Example gradient: from transparent to black */
-    background: linear-gradient(to top,  rgba(0, 0, 0, 0.5)50%,rgba(255, 255, 255, 0) 70% );
-    /* You can change the gradient values as needed */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Example gradient: from transparent to black */
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  /* You can change the gradient values as needed */
 }
 
 .overlay-gradient img {
-    /* This will fit the image to the container's width and height */
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    position: relative; /* Ensures the image stays below the gradient */
-    z-index: -1; /* Keeps the image behind the gradient */
+  /* This will fit the image to the container's width and height */
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: relative; /* Ensures the image stays below the gradient */
+  z-index: -1; /* Keeps the image behind the gradient */
 }
 
-
-
-.order-1{
+.order-1 {
   order: 1;
 }
-.order-2{
+.order-2 {
   order: 2;
+}
+@media only screen and (max-width: 992px) {
+  .container .col-md-12 {
+    margin: unset !important;
+  }
 }
 
 @media only screen and (max-width: 767px) {
-.order-1{
-  order: 2;
+  header.header-mobile {
+    overflow: hidden !important;
+    position: relative;
+    background: #111;
+    z-index: 1000;
+  }
+  .order-1 {
+    order: 2;
+  }
+  .order-2 {
+    order: 1;
+  }
 }
-.order-2{
-  order: 1;
-}
-}
-
-
